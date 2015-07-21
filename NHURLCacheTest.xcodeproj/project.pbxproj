@@ -17,8 +17,6 @@
 		6067F9B71B5DCF0D00C1D803 /* NHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067F9B61B5DCF0D00C1D803 /* NHDetailViewController.m */; };
 		6067F9BD1B5DCF5300C1D803 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6067F9BC1B5DCF5300C1D803 /* SystemConfiguration.framework */; };
 		6067F9C41B5DE86400C1D803 /* CustomURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067F9BF1B5DE86400C1D803 /* CustomURLCache.m */; };
-		6067F9C51B5DE86400C1D803 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067F9C11B5DE86400C1D803 /* Reachability.m */; };
-		6067F9C61B5DE86400C1D803 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067F9C31B5DE86400C1D803 /* Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +48,6 @@
 		6067F9BC1B5DCF5300C1D803 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6067F9BE1B5DE86400C1D803 /* CustomURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomURLCache.h; sourceTree = "<group>"; };
 		6067F9BF1B5DE86400C1D803 /* CustomURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomURLCache.m; sourceTree = "<group>"; };
-		6067F9C01B5DE86400C1D803 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		6067F9C11B5DE86400C1D803 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		6067F9C21B5DE86400C1D803 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
-		6067F9C31B5DE86400C1D803 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +137,6 @@
 			children = (
 				6067F9BE1B5DE86400C1D803 /* CustomURLCache.h */,
 				6067F9BF1B5DE86400C1D803 /* CustomURLCache.m */,
-				6067F9C01B5DE86400C1D803 /* Reachability.h */,
-				6067F9C11B5DE86400C1D803 /* Reachability.m */,
-				6067F9C21B5DE86400C1D803 /* Util.h */,
-				6067F9C31B5DE86400C1D803 /* Util.m */,
 			);
 			path = htmlCache;
 			sourceTree = "<group>";
@@ -255,8 +245,6 @@
 				6067F9C41B5DE86400C1D803 /* CustomURLCache.m in Sources */,
 				6067F9951B5DCEBF00C1D803 /* AppDelegate.m in Sources */,
 				6067F9921B5DCEBF00C1D803 /* main.m in Sources */,
-				6067F9C51B5DE86400C1D803 /* Reachability.m in Sources */,
-				6067F9C61B5DE86400C1D803 /* Util.m in Sources */,
 				6067F9B71B5DCF0D00C1D803 /* NHDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +448,7 @@
 				6067F9B11B5DCEBF00C1D803 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6067F9B21B5DCEBF00C1D803 /* Build configuration list for PBXNativeTarget "NHURLCacheTestTests" */ = {
 			isa = XCConfigurationList;

@@ -7,8 +7,8 @@
 //
 
 #import "CustomURLCache.h"
-#import "Reachability.h"
 #import <CommonCrypto/CommonCrypto.h>
+#import <SystemConfiguration/SystemConfiguration.h>
 
 @interface NSString (helper)
 + (NSString *)sha1:(NSString *)str;
@@ -46,6 +46,14 @@
                            ];
     return md5Result;
 }
+
+@end
+
+@interface CustomURLCache ()
+
+@property(nonatomic, assign) NSInteger cacheTime;
+@property(nonatomic, retain) NSString *diskPath;
+@property(nonatomic, retain) NSMutableDictionary *responseDictionary;
 
 @end
 
@@ -175,7 +183,7 @@
             [fileManager removeItemAtPath:otherInfoPath error:nil];
         }
     }
-    if (![Reachability networkAvailable]) {
+    if (![self isNetWorking]) {
         return nil;
     }
     __block NSCachedURLResponse *cachedResponse = nil;
@@ -218,5 +226,19 @@
     return nil;
 }
 
-
+-(BOOL)isNetWorking{
+    BOOL netISInuse = true;
+    
+    SCNetworkReachabilityFlags flags;
+    BOOL receivedFlags = false;
+    NSString *host = @"http://www.baidu.com";
+    SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithName(CFAllocatorGetDefault(), [host UTF8String]);
+    receivedFlags = SCNetworkReachabilityGetFlags(reachability, &flags);
+    CFRelease(reachability);
+    if (!receivedFlags || (flags == 0)){
+        netISInuse = false;
+    }
+    
+    return netISInuse;
+}
 @end
