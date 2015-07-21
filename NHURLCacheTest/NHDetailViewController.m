@@ -7,7 +7,7 @@
 //
 
 #import "NHDetailViewController.h"
-#import "URLCacheLib.h"
+#import "CustomURLCache.h"
 
 @interface NHDetailViewController ()<UIWebViewDelegate>
 
@@ -25,11 +25,11 @@
     if (self) {
         [self setWebTitle:title];
         _webURL = url?url:nil;
-        URLCacheLib *urlCache = [[URLCacheLib alloc] initWithMemoryCapacity:20 * 1024 * 1024
+        CustomURLCache *urlCache = [[CustomURLCache alloc] initWithMemoryCapacity:20 * 1024 * 1024
                                                                      diskCapacity:200 * 1024 * 1024
                                                                          diskPath:nil
                                                                         cacheTime:0];
-        [URLCacheLib setSharedURLCache:urlCache];
+        [CustomURLCache setSharedURLCache:urlCache];
     }
     return self;
 }
@@ -66,7 +66,7 @@
 
 -(void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
-    URLCacheLib *urlCache = (URLCacheLib *)[NSURLCache sharedURLCache];
+    CustomURLCache *urlCache = (CustomURLCache *)[NSURLCache sharedURLCache];
     [urlCache removeAllCachedResponses];
 }
 

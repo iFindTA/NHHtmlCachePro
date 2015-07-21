@@ -15,8 +15,10 @@
 		6067F9A01B5DCEBF00C1D803 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6067F99E1B5DCEBF00C1D803 /* LaunchScreen.xib */; };
 		6067F9AC1B5DCEBF00C1D803 /* NHURLCacheTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067F9AB1B5DCEBF00C1D803 /* NHURLCacheTestTests.m */; };
 		6067F9B71B5DCF0D00C1D803 /* NHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067F9B61B5DCF0D00C1D803 /* NHDetailViewController.m */; };
-		6067F9BB1B5DCF1900C1D803 /* libURLCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6067F9B91B5DCF1900C1D803 /* libURLCache.a */; };
 		6067F9BD1B5DCF5300C1D803 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6067F9BC1B5DCF5300C1D803 /* SystemConfiguration.framework */; };
+		6067F9C41B5DE86400C1D803 /* CustomURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067F9BF1B5DE86400C1D803 /* CustomURLCache.m */; };
+		6067F9C51B5DE86400C1D803 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067F9C11B5DE86400C1D803 /* Reachability.m */; };
+		6067F9C61B5DE86400C1D803 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067F9C31B5DE86400C1D803 /* Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +47,13 @@
 		6067F9AB1B5DCEBF00C1D803 /* NHURLCacheTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NHURLCacheTestTests.m; sourceTree = "<group>"; };
 		6067F9B51B5DCF0D00C1D803 /* NHDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHDetailViewController.h; sourceTree = "<group>"; };
 		6067F9B61B5DCF0D00C1D803 /* NHDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHDetailViewController.m; sourceTree = "<group>"; };
-		6067F9B91B5DCF1900C1D803 /* libURLCache.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libURLCache.a; sourceTree = "<group>"; };
-		6067F9BA1B5DCF1900C1D803 /* URLCacheLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLCacheLib.h; sourceTree = "<group>"; };
 		6067F9BC1B5DCF5300C1D803 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6067F9BE1B5DE86400C1D803 /* CustomURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomURLCache.h; sourceTree = "<group>"; };
+		6067F9BF1B5DE86400C1D803 /* CustomURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomURLCache.m; sourceTree = "<group>"; };
+		6067F9C01B5DE86400C1D803 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		6067F9C11B5DE86400C1D803 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		6067F9C21B5DE86400C1D803 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		6067F9C31B5DE86400C1D803 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6067F9BD1B5DCF5300C1D803 /* SystemConfiguration.framework in Frameworks */,
-				6067F9BB1B5DCF1900C1D803 /* libURLCache.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +141,12 @@
 		6067F9B81B5DCF1900C1D803 /* htmlCache */ = {
 			isa = PBXGroup;
 			children = (
-				6067F9B91B5DCF1900C1D803 /* libURLCache.a */,
-				6067F9BA1B5DCF1900C1D803 /* URLCacheLib.h */,
+				6067F9BE1B5DE86400C1D803 /* CustomURLCache.h */,
+				6067F9BF1B5DE86400C1D803 /* CustomURLCache.m */,
+				6067F9C01B5DE86400C1D803 /* Reachability.h */,
+				6067F9C11B5DE86400C1D803 /* Reachability.m */,
+				6067F9C21B5DE86400C1D803 /* Util.h */,
+				6067F9C31B5DE86400C1D803 /* Util.m */,
 			);
 			path = htmlCache;
 			sourceTree = "<group>";
@@ -243,8 +252,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6067F9981B5DCEBF00C1D803 /* ViewController.m in Sources */,
+				6067F9C41B5DE86400C1D803 /* CustomURLCache.m in Sources */,
 				6067F9951B5DCEBF00C1D803 /* AppDelegate.m in Sources */,
 				6067F9921B5DCEBF00C1D803 /* main.m in Sources */,
+				6067F9C51B5DE86400C1D803 /* Reachability.m in Sources */,
+				6067F9C61B5DE86400C1D803 /* Util.m in Sources */,
 				6067F9B71B5DCF0D00C1D803 /* NHDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +468,7 @@
 				6067F9B41B5DCEBF00C1D803 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
